@@ -1,0 +1,2946 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "2Dy_qNRJv2l9"
+      },
+      "source": [
+        "<center><b>© Content is made available under the CC-BY-NC-ND 4.0 license. Christian Lopez, lopezbec@lafayette.edu<center>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "zRHPf0v-ABa4"
+      },
+      "source": [
+        "\n",
+        "![alt text](https://www.python.org/static/community_logos/python-logo-master-v3-TM.png)\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "knQa1mDxm2Ne"
+      },
+      "source": [
+        "\n",
+        "<table align=\"left\">\n",
+        "  <td>\n",
+        "    <a href=\"https://colab.research.google.com/github/lopezbec/intro_python_notebooks/blob/main/Python_Basics.ipynb\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>\n",
+        "  </td>\n",
+        "  <td>\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "cKX4vkHPBILQ"
+      },
+      "source": [
+        "#Introduction to Python in Google Colab\n",
+        "Welcome to your first assignment. This exercise gives you a brief introduction to [Python](https://www.python.org/) as well as get you familiarized with [Google Colab](https://research.google.com/colaboratory/faq.html). Even if you've used Python before, this will help familiarize you with functions we'll need.  \n",
+        "<br>\n",
+        "Most of the notebooks we are going to be using are inspired from existing notebooks that are available online and are made  free for educational purposes. The work of [Andre Ng]( https://en.wikipedia.org/wiki/Andrew_Ng)  and others served as guide and  inspiration for these notebooks. Nonetheless, these notebooks should not be share without prior permission of the instructor. When working in an assignment always remember the [Student Code of Conduct]( https://conduct.lafayette.edu/student-handbook/student-code-of-conduct/).  \n",
+        "</br>\n",
+        "Before working on this assignment to you need to go over [Google Colab Introduction Notebook](https://colab.research.google.com/notebooks/welcome.ipynb). More resources about Google Colab, Python, and Machine Learning can be found at the end of this Notebook.\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "fU3e1UpIFNH9"
+      },
+      "source": [
+        "\n",
+        "###**Instructions:**\n",
+        "- You will be using Python 3.\n",
+        "\n",
+        "\n",
+        "- Only modify the code that is within the comments:\n",
+        "\n",
+        "`### START CODE HERE ###`\n",
+        "\n",
+        "`### END CODE HERE ###`\n",
+        "\n",
+        "\n",
+        "- You need to run all the code cells on the notebok sequentially\n",
+        "- If you are asked to change/update a cell, change/update and run it to check if your result is correct.\n",
+        "\n",
+        "\n",
+        "- You can also modify the color of your Notebooks by going to:\n",
+        "    \n",
+        "    Tools> Settings...>Site>Theme='dark'\n",
+        "- It is also recommended  to make:\n",
+        "    * Indentation width in spaces=4\n",
+        "    * Show line numbers=True\n",
+        "    * Show indentation guides=True\n",
+        "\n",
+        " Go to:   Tools>Settings...>Editor\n",
+        "\n",
+        "\n",
+        "**After this assignment you will:**\n",
+        "- Be able to use Google Colab Notebooks\n",
+        "- Understand  the basic concepts of Python\n",
+        "<br></br>\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "-839YoZoD1WI"
+      },
+      "source": [
+        "## 1- About [Jupyter](https://jupyter.org/) (aka iPython ) Notebooks ##"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "HCrUe-8jgVSV"
+      },
+      "source": [
+        "Jupyter Notebooks are interactive coding environments embedded in a webpage. You will be using Jupyter notebooks in this class via Google Colab. You only need to write code between the `### START CODE HERE ###` and `### END CODE HERE ###` comments. After writing your code, you can run the cell by either pressing \"SHIFT\"+\"ENTER\" (run a code cell and move to the next), “CTRL” +”ENTER” (just run the cell) or by clicking on \"Run Cell\" icon (denoted by a play symbol) in the top left corner of the code cell.\n",
+        "<br></br>\n",
+        "The notebooks will often specify \"(≈ X lines of code)\" in the comments to tell you about how much code you need to write. It is just a rough estimate, so it is completely fine for your code to be longer or shorter.\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "tUM4PBazJVfy"
+      },
+      "source": [
+        "##### **Exercise**:"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "wUvSNvvr_bM-"
+      },
+      "source": [
+        " Declare a varaible name `test` and set it to \"I am loving this class\" in the cell below and run the cells .\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 3,
+      "metadata": {
+        "id": "7PWPk-ThgVSW"
+      },
+      "outputs": [],
+      "source": [
+        "### START CODE HERE ### (≈ 1 line of code)\n",
+        "test = \"I am loving this class\"\n",
+        "### END CODE HERE ###"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 4,
+      "metadata": {
+        "id": "h8OH5pjagVSe",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "d34e1d66-457e-4f04-b243-ea6222cb0106"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "test: I am loving this class\n"
+          ]
+        }
+      ],
+      "source": [
+        "try:\n",
+        "    print (\"test: \" + test)\n",
+        "except Exception as e:\n",
+        "    print(\"Something is not working right\")\n",
+        "    print(e)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "bTQJnUokgVSk"
+      },
+      "source": [
+        "Expected output: `test: I am loving this class`"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "QSLFKQQtgVSm"
+      },
+      "source": [
+        "**What you need to remember**:\n",
+        "\n",
+        "- Run your cells using SHIFT+ENTER (or \"Run cell\")\n",
+        "\n",
+        "- Write code in the designated areas using Python 3 syntax only\n",
+        "\n",
+        "- Do not modify the code outside of the designated areas:\n",
+        "\n",
+        "`### START CODE HERE ###`\n",
+        "\n",
+        "*Some Code here*\n",
+        "\n",
+        "`### END CODE HERE ###`\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "-S0eQ8lIDnUq"
+      },
+      "source": [
+        "### 1.1 - Google Colab Specifics"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "OIaZnXnV8R5t"
+      },
+      "source": [
+        "Google Colab is a Virtual Machine you can access directly via a browser. You can run commands at the VM's terminal, just need to prefix the line with an exclamation mark `!`\n",
+        "\n",
+        "You can use a wide variety  of commands at the terminal. Some of the most useful  ones are:\n",
+        "\n",
+        " - `pwd`  to display the path of the current working directory\n",
+        "\n",
+        " - `cd`  to change the working directory\n",
+        "\n",
+        " - `ls`  to display a list of the directory content\n",
+        "\n",
+        " - `mkdir` to create a new directory\n",
+        "\n",
+        "\n",
+        "*Here is one \"[Command Line Cheat Sheet](https://www.git-tower.com/blog/command-line-cheat-sheet/)\" out of the thousands  you can find online.*"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "isAisRj_JvSB"
+      },
+      "source": [
+        "####**Exercise**:"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "tbqbyr5G_PgP"
+      },
+      "source": [
+        "print the current directory and its content"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 5,
+      "metadata": {
+        "id": "maZN08jT_ykS",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "22b5ad6b-307d-44da-eb77-ec6b1da85ad6"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "/content\n",
+            "sample_data\n"
+          ]
+        }
+      ],
+      "source": [
+        "### START CODE HERE ### (≈ 2 line of code)\n",
+        "!pwd\n",
+        "!ls\n",
+        "### END CODE HERE ###"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "ZOeq3r9MAQw_"
+      },
+      "source": [
+        "Something very important when working in developing and deploying Machine Learning systems is to keep track of what version of python and its libraries you are using. This is because some methods and classes might be deprecated in a newer version of a library which can introduce some error in your code. Thankfully there are multiple ways of ensuring we install and import the right version.\n",
+        "\n",
+        "[Anaconda]( https://www.anaconda.com/) is a great tool you should get familiarize with since it will help you manage  your packages and virtual environments in your machine. When working with Google Colab, we don’t need to worry about this that much.\n",
+        "\n",
+        "As a future Machine Learning practitioner, an important skill you need to develop is the ability to find solutions for a given problem or answer(s) for a given questions effectively.\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "isH6CERDJ2C-"
+      },
+      "source": [
+        "#### **Exercise**:"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "0pH88Tt9CmIe"
+      },
+      "source": [
+        " print the version of python you are using in this notebook."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 6,
+      "metadata": {
+        "id": "4OuLD3ieAbEB",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "e08a1b44-c52d-406b-f8f4-4eea31728b8c"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Python 3.11.11\n"
+          ]
+        }
+      ],
+      "source": [
+        "### START CODE HERE ### (≈ 1 line of code)\n",
+        "!python --version\n",
+        "\n",
+        "### END CODE HERE ###"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "k9BW5CmiC8bP"
+      },
+      "source": [
+        "\n",
+        "\n",
+        "*Hint, google \"how to check python version via command line Linux (since Colab's VM is Linux based)\"*"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "9x59kr8IEBVF"
+      },
+      "source": [
+        "All usage of Google Colab in this course is completely free of charge. Even GPU usage is provided free of charge for approx.. 12 hours a day! See [TensorFlow with GPU Notebook]( https://colab.research.google.com/notebooks/gpu.ipynb)\n",
+        "\n",
+        "**Some final words on Google Colab**\n",
+        "*    Execute each cell in order, you can edit and re-execute cells if you want\n",
+        "*   Sometimes, this could have unintended consequences. For example, if you add a dimension to an array and execute the cell multiple times, then the cells after may not work. If you encounter problem reset your environment:\n",
+        "  *   `Runtime`>`Restart runtime`   OR \"CTRL\" +\"M\" (resets your Python shell)\n",
+        "  *   `Runtime`> `Restart all runtimes` (Will reset the Google Colab image, and get you back to a 100% clean environment)\n",
+        "* You can also clear the output in the Google  Colab by doing: `Edit`>`Clear all outputs`\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "hr0T2W96HXVf"
+      },
+      "source": [
+        "## 2- Quick Introduction to [Python](https://www.python.org/)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "1C9K65VEHnrq"
+      },
+      "source": [
+        "Python is a programming language that has been under development for several years [(see the history of Python here)](https://en.wikipedia.org/wiki/History_of_Python).\n",
+        "\n",
+        "This will be just a quick introduction to Python. If you would like to learn more, there are plenty of resources online, please consider the following ones:\n",
+        "\n",
+        "- Getting Started with Python (for free online!):\n",
+        "\n",
+        "  - [CodeAcademy](https://www.codecademy.com/learn/learn-python-3)\n",
+        "  - [SoloLearn](https://www.sololearn.com/Course/Python/)\n",
+        "  - [others...](https://docs.python-guide.org/intro/learning/)\n",
+        "\n",
+        "<br>\n",
+        "\n",
+        "\n",
+        "- [Python Data Science Handbook](http://shop.oreilly.com/product/0636920034919.do):\n",
+        "  - [Book GitHub](https://github.com/jakevdp/PythonDataScienceHandbook)\n",
+        "  - [Book Google Colab Notebooks](https://colab.research.google.com/github/jakevdp/PythonDataScienceHandbook/blob/master/notebooks/Index.ipynb)\n",
+        "<br><br>\n",
+        "- [Python Reference](https://docs.python.org/3.5/reference/)\n",
+        "\n",
+        "  \n",
+        "\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "6RrDVfpGPb_n"
+      },
+      "source": [
+        "*The following sections were inspired and uses code from the [Jupyter Notebooks of the CS-245 course from Bryn Mawr College](https://jupyter.brynmawr.edu/hub/login) and Notebook from [StrataScracth](https://colab.research.google.com/drive/1cW5bu556n1XeP6uZrR0kuFl6Mv1Tt3k7#scrollTo=Irr7mMhXVIKs&forceEdit=true&sandboxMode=true)*"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "UfPWuuG_PCPI"
+      },
+      "source": [
+        "\n",
+        "Python is an [imperative language](https://en.wikipedia.org/wiki/Imperative_programming) based on statements. That is, programs in Python consists of lines composed of statements. A statement can be:\n",
+        "\n",
+        "  - a single expression\n",
+        "  - an assignment\n",
+        "  - a function call\n",
+        "  -  a function definition\n",
+        "  - a statement; statement\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "Rjby-xBVQUtn"
+      },
+      "source": [
+        "### 2.1- Expressions\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "6ByTCkfBQuJS"
+      },
+      "source": [
+        "**Numbers**\n",
+        "   - Integers:"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 7,
+      "metadata": {
+        "id": "t8SLL-wDQ4lA",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "48b8e58a-d853-4ac9-e84c-5d16453ce2ce"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "<class 'int'>\n",
+            "<class 'int'>\n",
+            "<class 'int'>\n"
+          ]
+        }
+      ],
+      "source": [
+        "#Run this cell to print `print()` the class type `type()` of a given number.\n",
+        "print( type( 1 ))\n",
+        "print( type( 2 ))\n",
+        "print( type( -100 ))"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "fbuBijhYRW33"
+      },
+      "source": [
+        "   - Floating-point:"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 8,
+      "metadata": {
+        "id": "SwZfgaN1SHIt",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "b789eb4f-c9cc-4f28-9a94-a3d363baaab2"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "<class 'float'>\n",
+            "<class 'float'>\n",
+            "<class 'float'>\n"
+          ]
+        }
+      ],
+      "source": [
+        "#Run this cell to print `print()` the class type `type()` of a given number.\n",
+        "print( type( 1.3 ))\n",
+        "print( type( 2.34 ))\n",
+        "print( type( -100.23 ))"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "ECg3qkzFSMVo"
+      },
+      "source": [
+        "   - Complex numbers:\n",
+        "\n",
+        "    *written with a \"j\" as the imaginary part:*"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 9,
+      "metadata": {
+        "id": "d54ND2Q4SUz3",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "5f6c27c7-fe38-4f0d-d89d-2fbc2dc53496"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "<class 'complex'>\n",
+            "<class 'complex'>\n",
+            "<class 'complex'>\n"
+          ]
+        }
+      ],
+      "source": [
+        "#Run this cell to print `print()` the class type `type()` of a given number.\n",
+        "print( type( 1j ))\n",
+        "print( type( 2.3j+3j ))\n",
+        "print( type( -100j ))"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "HfygMnlATmFy"
+      },
+      "source": [
+        "**Strings**"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 10,
+      "metadata": {
+        "id": "9hvssfsUTtzp",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "outputId": "1e7c0435-c1ce-47fa-b6e1-64dcfb493f38"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'Machine Learning'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 10
+        }
+      ],
+      "source": [
+        "\"Machine Learning\""
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "VfG4vmSGT-Gd"
+      },
+      "source": [
+        "Notice that the output does not match exactly the input. Since we used double-quotes but the representation of the string used single-quotes. Python will default to showing representations of values using single-quotes.\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "jjSmfS44J7Ss"
+      },
+      "source": [
+        "####**Exercise**:"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "PNDlO0oZJEeh"
+      },
+      "source": [
+        "Now you try it and type something:"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 12,
+      "metadata": {
+        "id": "C88HuJxlUHHY",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "ec7dfce3-8eca-42ee-e1a0-1e79cd302ca8"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Python is an amazing programming language!\n"
+          ]
+        }
+      ],
+      "source": [
+        "### START CODE HERE ### (≈ 1 line of code)\n",
+        "my_string = \"Python is an amazing programming language!\"\n",
+        "print(my_string)\n",
+        "### END CODE HERE ###"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "3w2FSSlgUNJx"
+      },
+      "source": [
+        "**Boolean Values**"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 13,
+      "metadata": {
+        "id": "Ntk1C6zbUT_n",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "8d08cc77-7553-4392-aa64-4297a3cf848c"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "True"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 13
+        }
+      ],
+      "source": [
+        "True"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 14,
+      "metadata": {
+        "id": "02Lgzj04UT1y",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "cb8debdb-5fd8-4928-8997-9615d758d8cb"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "False"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 14
+        }
+      ],
+      "source": [
+        "False"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "qytKz7R6UevR"
+      },
+      "source": [
+        "**List and Dictionaries**\n",
+        "\n",
+        "\n",
+        "Python has three very useful data structures built into the language:\n",
+        "\n",
+        "  - dictionaries (hash tables):`{key:value/item, ...}`\n",
+        "  - lists: `[item,...]`\n",
+        "  - tuples: `(item, ...)`\n",
+        "\n",
+        "**List is a mutable list of items. Tuple is a read-only data structure (immutable).**\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 15,
+      "metadata": {
+        "id": "8EM94qCjU_BY",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "5da3b7ee-3dce-4821-b106-bad601fc460f"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "<class 'dict'>\n",
+            "<class 'list'>\n",
+            "<class 'tuple'>\n"
+          ]
+        }
+      ],
+      "source": [
+        "#Run this cell to print `print()` the class type `type()`\n",
+        "print( type( {\"Day1\":\"Welcome\", \"Day2\": \"Types of ML Systems\", \"Day3\":[1,2,3]} ))\n",
+        "print( type( [2,3,4] ))\n",
+        "print( type( (1,2,4,5) ))\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "I6z75NU4-Sld"
+      },
+      "source": [
+        "### 2.2- Basic Arithmetic Operators in Python\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "8OGnjfsG-qW1"
+      },
+      "source": [
+        "Arithmetic operators are used to perform mathematical operations like:\n",
+        "\n",
+        "<figure>\n",
+        "<img src=\"https://d1e4pidl3fu268.cloudfront.net/f20083ef-a2fb-4673-ac88-13d58ba68133/Arithmeticoperators.png\" width=\"400\" height=\"300\" />\n",
+        "</figure>\n",
+        "</br>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 16,
+      "metadata": {
+        "id": "ECr7twnW_CYk",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "c3adfbcb-483e-4897-c0a9-7609d7a653c5"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "13\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Examples of Arithmetic Operator\n",
+        "a = 9\n",
+        "b = 4\n",
+        "\n",
+        "# Addition of numbers\n",
+        "add = a + b\n",
+        "\n",
+        "# print results\n",
+        "print(add)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 17,
+      "metadata": {
+        "id": "WcMbulup_Ko_",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "4481d26e-3f73-43d5-bcec-0e6397c06538"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "5\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Subtraction of numbers\n",
+        "sub = a - b\n",
+        "\n",
+        "# print results\n",
+        "print(sub)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 18,
+      "metadata": {
+        "id": "nCHb9CpF_KlI",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "e70f4a3a-7100-4215-a721-d015e0a7f50d"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "36\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Multiplication of number\n",
+        "mul = a * b\n",
+        "\n",
+        "# print results\n",
+        "print(mul)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 19,
+      "metadata": {
+        "id": "fMPcvn-6_Kh5",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "8a13345f-e79c-46b0-ae8f-c87fc6e6de70"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "2.25\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Division(float) of number\n",
+        "div1 = a / b\n",
+        "\n",
+        "# print results\n",
+        "print(div1)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "_iI4SghpKAHT"
+      },
+      "source": [
+        "####**Exercise**:"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "R7FQVwa2_liV"
+      },
+      "source": [
+        "Try to complete the following code cells, using the given function name"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 27,
+      "metadata": {
+        "id": "f14XWaA__Kd6"
+      },
+      "outputs": [],
+      "source": [
+        "# Division floor or the Quotient of a divided by b  (name div2)\n",
+        "\n",
+        "### START CODE HERE ### (≈ 1 line of code)\n",
+        "div2 = a // b\n",
+        "### END CODE HERE ###"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 29,
+      "metadata": {
+        "id": "3HzJ5zTD_KXn"
+      },
+      "outputs": [],
+      "source": [
+        "# Modulo of a divided by b (name mod)\n",
+        "\n",
+        "### START CODE HERE ### (≈ 1 line of code)\n",
+        "mod = a % b\n",
+        "### END CODE HERE ###"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 30,
+      "metadata": {
+        "id": "ByCswTbgAoaV"
+      },
+      "outputs": [],
+      "source": [
+        "# a to the power of b (name sqr)\n",
+        "\n",
+        "### START CODE HERE ### (≈ 1 line of code)\n",
+        "sqr = a ** b\n",
+        "### END CODE HERE ###"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 31,
+      "metadata": {
+        "id": "iI_OJLMxAzUw"
+      },
+      "outputs": [],
+      "source": [
+        "# b to the power of half of a (name pwr)\n",
+        "\n",
+        "### START CODE HERE ### (≈ 1 line of code)\n",
+        "pwr = b ** (a / 2)\n",
+        "### END CODE HERE ###"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 32,
+      "metadata": {
+        "id": "2Sd0mIoH_v06",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "d69a79ae-cf51-4056-a7e7-396b06e36a9b"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "2\n",
+            "1\n",
+            "6561\n",
+            "512.0\n"
+          ]
+        }
+      ],
+      "source": [
+        "try:\n",
+        "    # print results\n",
+        "    print(div2)\n",
+        "    print(mod)\n",
+        "    print(sqr)\n",
+        "    print(pwr)\n",
+        "except Exception as e:\n",
+        "    print(\"Something is not working right\")\n",
+        "    print(e)\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "eiJmHf1HHo8J"
+      },
+      "source": [
+        "Expected output:\n",
+        "\n",
+        "```\n",
+        "2\n",
+        "1\n",
+        "6561\n",
+        "512.0\n",
+        "```\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "AVhpIyyXofVt"
+      },
+      "source": [
+        "### 2.3- Function Calls\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "AnNWnmZno7T-"
+      },
+      "source": [
+        "\n",
+        "\n",
+        "There are two ways to call functions in Python:\n",
+        "\n",
+        "\n",
+        "1.  **by pre-defined infix operator name:**\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 33,
+      "metadata": {
+        "id": "dlXM3XcypSa-",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "bb2cccf5-a44d-44cd-e162-78e4078e5c57"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "3"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 33
+        }
+      ],
+      "source": [
+        "1 + 2"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "xI_VDrQupS5I"
+      },
+      "source": [
+        " 2.   **by function name, followed by parentheses:**\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 34,
+      "metadata": {
+        "id": "Zu4SaoIoqjlL",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "afb202d9-67f4-4762-c4fc-160b9fd421bd"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "3"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 34
+        }
+      ],
+      "source": [
+        "import operator\n",
+        "operator.add(1, 2)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "0FVNGYVlsA5q"
+      },
+      "source": [
+        "If you want to display a result as an output use the `print()` functions, versus evaluating and printing result (side-effect)\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 35,
+      "metadata": {
+        "id": "bNpjGLV6sRMA",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "994a4f75-3fe3-4da6-bc57-0d554f733931"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "3"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 35
+        }
+      ],
+      "source": [
+        "1\n",
+        "1+2"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 36,
+      "metadata": {
+        "id": "HLvxn-KosUkc",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "063f337e-a787-4e1c-8122-9bc9bceeccf1"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1\n",
+            "3\n"
+          ]
+        }
+      ],
+      "source": [
+        "print(1)\n",
+        "print(1+2)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "TBEO7X6CtPr_"
+      },
+      "source": [
+        "### 2.4- Defining Functions\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "C1RYsX8utdwL"
+      },
+      "source": [
+        "In Python you can create your own functions using the keyword `def`  (for define) followed by the function name and function arguments in parentheses. All function definitions must end with the colon sign (:) or you will get an error.\n",
+        "\n",
+        "Functions can do anything and usually they give some value as their output. That value is given back to the caller of the function (returned) using the `return` keyword followed by the value. Functions are always named by their purpose so we always know what to expect from them.\n",
+        "\n",
+        "Most of the programming languages like C, Java, R use curly brackets  `{ }` to define a block of code. Python uses **INDENTATION!**\n",
+        "\n",
+        "A  block of code (body of a function, loop, etc.) starts with indentation and ends with the first unindented line. The amount of indentation is up to you, but it must be consistent throughout that block.\n",
+        "\n",
+        "Generally, four whitespaces are used for indentation and is preferred over tabs. Here is an example.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 37,
+      "metadata": {
+        "id": "2XPt8wZpuTB3",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "9f73d36a-c918-478a-e40d-83deffb19946"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "This line is not part of the function 'plus'\n"
+          ]
+        }
+      ],
+      "source": [
+        "def plus(a, b):\n",
+        "    return a + b\n",
+        "print(\"This line is not part of the function 'plus'\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "EwV-uoDnKF1c"
+      },
+      "source": [
+        "####**Exercise**:"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "QrTzQOUMw5Jq"
+      },
+      "source": [
+        "Now call the functions `plus()` with values 10 and 25"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 38,
+      "metadata": {
+        "id": "8LoYd6FHxJYB",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "c510d680-09d7-4a9f-8ecc-5ba9e92d5e97"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "35\n"
+          ]
+        }
+      ],
+      "source": [
+        "### START CODE HERE ### (≈ 2 line of code)\n",
+        "result = plus(10, 25)\n",
+        "print(result)\n",
+        "### END CODE HERE ###"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "stV73DjZyh03"
+      },
+      "source": [
+        "All functions return something, even if you don't specify it. If you don't specify a return value, then it will default to returning `None`. Write a function call plus2,that takes as input two numeric values, it add them together BUT it does not return anything\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 40,
+      "metadata": {
+        "id": "UEbpVYFkyYNB"
+      },
+      "outputs": [],
+      "source": [
+        "### START CODE HERE ### (≈ 2 line of code)\n",
+        "def plus2(a, b):\n",
+        "  print(a + b)\n",
+        "### END CODE HERE ###"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 41,
+      "metadata": {
+        "id": "rdcWcNoTy5gZ",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "e63a31e7-c685-4b8d-abe4-7aa4d5c80c01"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "35\n",
+            "None\n"
+          ]
+        }
+      ],
+      "source": [
+        "try:\n",
+        "    print(plus2(10,25))\n",
+        "except Exception as e:\n",
+        "    print(\"Something is not working right\")\n",
+        "    print(e)\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "NYfYvaGHxcHh"
+      },
+      "source": [
+        "**Expected output**: `None`"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "9d3aRmWFEs2o"
+      },
+      "source": [
+        "You can also call functions using named arguments. Named arguments mean that when calling the function. we do not pass just arguments as values (e.g. 2) but pass arguments as name, value pairs (e.g. x = 2). When using this calling convention, we can order the arguments however we want.\n",
+        "\n",
+        "For example:"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 42,
+      "metadata": {
+        "id": "ZHhbymO3FhHH"
+      },
+      "outputs": [],
+      "source": [
+        "#Define a function that take 3 arguemtns\n",
+        "def add_and_sub( a,b,c):\n",
+        "    print(a+b-c)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 43,
+      "metadata": {
+        "id": "JNLc11VjFuVA",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "14908d84-0335-44b5-aca1-3b1be417649c"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "3\n"
+          ]
+        }
+      ],
+      "source": [
+        "#Call the functions using arguments\n",
+        "add_and_sub(4,5,6)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 44,
+      "metadata": {
+        "id": "GtLROLfeGDTb",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "9f25ca2f-4235-4a4d-cf4e-e084b5493061"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "3\n"
+          ]
+        }
+      ],
+      "source": [
+        "#Call the functions using argument name and value pairs\n",
+        "add_and_sub(a=4,b=5,c=6)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 45,
+      "metadata": {
+        "id": "w4KDJKW6GGSc",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "82c8bb4d-1478-4c45-c231-6997fdb6b2b4"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "5\n"
+          ]
+        }
+      ],
+      "source": [
+        "#Call the functions using argument name and value pairs (we can have any order)\n",
+        "add_and_sub(b=4,c=5,a=6)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "V7rYenAgHOZI"
+      },
+      "source": [
+        "### 2.5- Lambda Functions"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "DDaWsDqzHT_m"
+      },
+      "source": [
+        "The functions  we defined above have a name and we can call them with their names. However, there also exist another variety  of functions which are not named and are called *lambdas*.\n",
+        "\n",
+        "It might seem weird to create a function and not give it a name but consider the case of a function used only once (this happens much more often than you may think)\n",
+        "\n",
+        "Defining lambdas goes with the `lambda` keyword, followed by a list of parameters separated by comas, followed by a colon (:) and followed by a **single** python expression. The reason for only using a single expressions is that if you have more than a single expression you should probably declare and devise a named function as we did above.\n",
+        "\n",
+        "Examples:\n",
+        "- `lambda a, b, c: (a + b) - c`\n",
+        "- `lambda x, y, z: (x * y) / z`\n",
+        "- `lambda string: string.split(' ')[0]`"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 46,
+      "metadata": {
+        "id": "LToSdsj0IhzM",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "58d6c499-56c8-4d4a-898e-3c225ef51b7b"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "3\n"
+          ]
+        }
+      ],
+      "source": [
+        " (lambda a, b, c: print((a + b) - c))(4,5,6)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 47,
+      "metadata": {
+        "id": "hC1DRzMzIldO",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "5830b88f-99f5-4de0-a779-3f41ad06c84e"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "3\n"
+          ]
+        }
+      ],
+      "source": [
+        " g=lambda a, b, c: print((a + b) - c)\n",
+        " g(4,5,6)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 48,
+      "metadata": {
+        "id": "AQdqaShtImZR",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "outputId": "0c70c3e4-6a76-4045-910f-f57dc8dc3a2d"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'correct'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 48
+        }
+      ],
+      "source": [
+        "s=lambda string: string.split('_')[4]\n",
+        "s(\"This_is_not_Right_correct\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "Joau0FwsJzUL"
+      },
+      "source": [
+        "### 2.6- Function References"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "2BZCQUP3TFGD"
+      },
+      "source": [
+        "When you define functions and their parameters you usually think of parameters either as being some simple type (e.g., integer, float, character string) or some class object. It is possible to define functions whose parameters are other functions. This might be an abstract concept but a useful one.\n",
+        "\n",
+        "An example is given in the following code cell:\n",
+        "\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 49,
+      "metadata": {
+        "id": "0fClVmaSXf8L"
+      },
+      "outputs": [],
+      "source": [
+        "def operate(operating_function, number):\n",
+        "    \"\"\"\n",
+        "    The operate function takes two parameters:\n",
+        "    - operating_function which is a function that will do something with our number\n",
+        "    - number which is what is passed to another_function as input\n",
+        "    It prints the results of calling the function **referenced** by first parameter with the second parameter as input.\n",
+        "    \"\"\"\n",
+        "   #It prints the output of the operating_function given the number as arguemnt\n",
+        "    print(operating_function(number))\n",
+        "\n",
+        "def is_powerful(number):\n",
+        "    \"\"\"\n",
+        "    `is_powerful`  checks if a number is powerful and says True or False.\n",
+        "    \"\"\"\n",
+        "    if number > 9000:\n",
+        "        return True\n",
+        "    else:\n",
+        "        return False\n",
+        "\n",
+        "def make_powerful(number):\n",
+        "    \"\"\"\n",
+        "    `make_powerful` which makes small numbers powerful by making them 9001\n",
+        "    \"\"\"\n",
+        "    if number <= 9000:\n",
+        "        return 9001\n",
+        "    else:\n",
+        "        return number\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "IhTtT98XYFtu"
+      },
+      "source": [
+        "You probably noticed that within each function we have a multiple line comment using `\"\"\" TEXT HERE \"\"\"` instead of the `#` symbol. This are Python documentation strings (aka [docstrings](https://www.geeksforgeeks.org/python-docstrings/)) which provide a convenient way of associating documentation with Python modules, functions, classes, and methods.\n",
+        "\n",
+        "This allows us to provide more details about the functions, which can be accessed using the `?` symbol follow by the function name, like:\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 50,
+      "metadata": {
+        "id": "BcMjZp82YbrI"
+      },
+      "outputs": [],
+      "source": [
+        "?operate"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "pZI7GQz7U2Qb"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "sbpcKG_lYBCb"
+      },
+      "source": [
+        "The crucial lines are the one below:\n",
+        "- We pass 1) `is_powerful` and 2) `make_powerfull` **without any brackets** as the reference to the functions\n",
+        "\n",
+        "- We also pass `8000` and `9000` as the number we want to operate\n",
+        "\n",
+        "Not having brackets is very important,  if we used brackets that would be calling the functions. We do not want to call it here but just say to our `operate` function what is the function it should use as its `operating_function`"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 51,
+      "metadata": {
+        "id": "6VL41bGGYAXs",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "b1bfad61-abd7-42f3-fdfa-6323d5908894"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "False\n",
+            "9001\n"
+          ]
+        }
+      ],
+      "source": [
+        "operate(is_powerful, 8000)\n",
+        "\n",
+        "operate(make_powerful, 9000)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "YmbMpohPaaXQ"
+      },
+      "source": [
+        "### 2.7- For Loops"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "DgJOykSha2I5"
+      },
+      "source": [
+        "For loops are an essential part of any  programming language since they allow us to iterate infinitely over lines of code.\n",
+        "\n",
+        "In Python for loops have the syntactic structure:\n",
+        "\n",
+        "```\n",
+        "for x in iterable:\n",
+        "    do something with x\n",
+        "```\n",
+        "    \n",
+        "There are many iterables in python but for now we will stick with the two main ones:"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "guWXT_Vmex8H"
+      },
+      "source": [
+        "**1) List**\n",
+        "\n",
+        "For example, the following for loop goes over a list where we just print each element"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 52,
+      "metadata": {
+        "id": "Dvw2sxbid5vA",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "143077f3-5e83-49c7-f3db-245436eb3ce1"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Expressions\n",
+            "Arithmetic Operators\n",
+            "Functions\n"
+          ]
+        }
+      ],
+      "source": [
+        "completed = [\"Expressions\", \"Arithmetic Operators\", \"Functions\"]\n",
+        "for x in completed:\n",
+        "    print(x)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "LG8SFD7FeMHy"
+      },
+      "source": [
+        "In Python [all loops](https://www.geeksforgeeks.org/loops-in-python/) can end in one of two ways:\n",
+        "- When the iterable is finished (i.e., we reached the end of a list)\n",
+        "- Forcefully using break, using the `break` keyword\n",
+        "\n",
+        "In this example we forcefully exit a loop using `break` if we reach spam in our list of edibles.\n",
+        "\n",
+        "You can also notice the added construction `else:`. This else is not linked to the `if` above it but to the `for`. You can see that by tracing the lines of indentation.\n",
+        "\n",
+        "So, what does that mean? It means that if the loop ended naturally (without break) the code in `else` section will be executed."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 53,
+      "metadata": {
+        "id": "w4QI5JbzelJA",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "82feb9fd-5bdc-472d-dfe3-b333421af382"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Great, delicious ham\n",
+            "Great, delicious eggs\n",
+            "Great, delicious nuts\n",
+            "I am so glad: No spam!\n",
+            "Finally, I finished stuffing myself\n"
+          ]
+        }
+      ],
+      "source": [
+        "edibles = [\"ham\",\"eggs\",\"nuts\"]\n",
+        "for food in edibles:\n",
+        "    if food == \"spam\":\n",
+        "        print(\"No more spam please!\")\n",
+        "        break\n",
+        "    print(\"Great, delicious {0}\".format(food))\n",
+        "else:\n",
+        "    print(\"I am so glad: No spam!\")\n",
+        "\n",
+        "print(\"Finally, I finished stuffing myself\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "MrYMEe7Ve2ia"
+      },
+      "source": [
+        "**2) Range**\n",
+        "\n",
+        "For this, we use the `range()` function.\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "gNVpUlhcKMUF"
+      },
+      "source": [
+        "####**Exercise**:"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "aYeRZ_L_KPsC"
+      },
+      "source": [
+        "In the code cell bellow get the Docstring  of the functions range()"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 54,
+      "metadata": {
+        "id": "3w8l-FEoe-DD",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "49b4f1b7-e85d-4117-b87b-3d82bab90292"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Help on class range in module builtins:\n",
+            "\n",
+            "class range(object)\n",
+            " |  range(stop) -> range object\n",
+            " |  range(start, stop[, step]) -> range object\n",
+            " |  \n",
+            " |  Return an object that produces a sequence of integers from start (inclusive)\n",
+            " |  to stop (exclusive) by step.  range(i, j) produces i, i+1, i+2, ..., j-1.\n",
+            " |  start defaults to 0, and stop is omitted!  range(4) produces 0, 1, 2, 3.\n",
+            " |  These are exactly the valid indices for a list of 4 elements.\n",
+            " |  When step is given, it specifies the increment (or decrement).\n",
+            " |  \n",
+            " |  Methods defined here:\n",
+            " |  \n",
+            " |  __bool__(self, /)\n",
+            " |      True if self else False\n",
+            " |  \n",
+            " |  __contains__(self, key, /)\n",
+            " |      Return key in self.\n",
+            " |  \n",
+            " |  __eq__(self, value, /)\n",
+            " |      Return self==value.\n",
+            " |  \n",
+            " |  __ge__(self, value, /)\n",
+            " |      Return self>=value.\n",
+            " |  \n",
+            " |  __getattribute__(self, name, /)\n",
+            " |      Return getattr(self, name).\n",
+            " |  \n",
+            " |  __getitem__(self, key, /)\n",
+            " |      Return self[key].\n",
+            " |  \n",
+            " |  __gt__(self, value, /)\n",
+            " |      Return self>value.\n",
+            " |  \n",
+            " |  __hash__(self, /)\n",
+            " |      Return hash(self).\n",
+            " |  \n",
+            " |  __iter__(self, /)\n",
+            " |      Implement iter(self).\n",
+            " |  \n",
+            " |  __le__(self, value, /)\n",
+            " |      Return self<=value.\n",
+            " |  \n",
+            " |  __len__(self, /)\n",
+            " |      Return len(self).\n",
+            " |  \n",
+            " |  __lt__(self, value, /)\n",
+            " |      Return self<value.\n",
+            " |  \n",
+            " |  __ne__(self, value, /)\n",
+            " |      Return self!=value.\n",
+            " |  \n",
+            " |  __reduce__(...)\n",
+            " |      Helper for pickle.\n",
+            " |  \n",
+            " |  __repr__(self, /)\n",
+            " |      Return repr(self).\n",
+            " |  \n",
+            " |  __reversed__(...)\n",
+            " |      Return a reverse iterator.\n",
+            " |  \n",
+            " |  count(...)\n",
+            " |      rangeobject.count(value) -> integer -- return number of occurrences of value\n",
+            " |  \n",
+            " |  index(...)\n",
+            " |      rangeobject.index(value) -> integer -- return index of value.\n",
+            " |      Raise ValueError if the value is not present.\n",
+            " |  \n",
+            " |  ----------------------------------------------------------------------\n",
+            " |  Static methods defined here:\n",
+            " |  \n",
+            " |  __new__(*args, **kwargs)\n",
+            " |      Create and return a new object.  See help(type) for accurate signature.\n",
+            " |  \n",
+            " |  ----------------------------------------------------------------------\n",
+            " |  Data descriptors defined here:\n",
+            " |  \n",
+            " |  start\n",
+            " |  \n",
+            " |  step\n",
+            " |  \n",
+            " |  stop\n",
+            "\n"
+          ]
+        }
+      ],
+      "source": [
+        "### START CODE HERE ### (≈ 1 line of code)\n",
+        "help(range)\n",
+        "### END CODE HERE ###"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "tPmf4msXfiBQ"
+      },
+      "source": [
+        "Specifically, we use the syntax:\n",
+        "\n",
+        "```\n",
+        "for x in range(arguments):\n",
+        "    do something with x\n",
+        "```"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 55,
+      "metadata": {
+        "id": "ypcAFGztf1js",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "e06998c0-9005-4786-dac8-99fc1b2ac4c7"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1\n",
+            "3\n",
+            "5\n",
+            "7\n",
+            "9\n"
+          ]
+        }
+      ],
+      "source": [
+        "#We pass three arguments to the range function (start, end, step)\n",
+        "for x in range(1,10,2):\n",
+        "    print(x)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "RNOSbfzQgE1D"
+      },
+      "source": [
+        "You can also have multiple `for` loop, which are called \"Nested Loops\""
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 56,
+      "metadata": {
+        "id": "D0VuWMFQgQq6",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "aa590aeb-1f48-4e2b-fa90-309bf24d6d2c"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "ROW 0 COLUMN 0\n",
+            "ROW 0 COLUMN 1\n",
+            "ROW 0 COLUMN 2\n",
+            "ROW 1 COLUMN 0\n",
+            "ROW 1 COLUMN 1\n",
+            "ROW 1 COLUMN 2\n",
+            "ROW 2 COLUMN 0\n",
+            "ROW 2 COLUMN 1\n",
+            "ROW 2 COLUMN 2\n",
+            "ROW 3 COLUMN 0\n",
+            "ROW 3 COLUMN 1\n",
+            "ROW 3 COLUMN 2\n",
+            "ROW 4 COLUMN 0\n",
+            "ROW 4 COLUMN 1\n",
+            "ROW 4 COLUMN 2\n"
+          ]
+        }
+      ],
+      "source": [
+        "for x in range(0, 5):\n",
+        "    for y in range(0, 3):\n",
+        "        print(\"ROW {0} COLUMN {1}\".format(x, y))"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "-oNf_OvG4GZ4"
+      },
+      "source": [
+        "### 2.8- Equality vs. Identity"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "xAVG9SNV4Kw8"
+      },
+      "source": [
+        "**Equality**\n",
+        "\n",
+        "Many programming languages have the concept of equality. In Python we use the double equals sign `==` to designate this concept.  Equality is basically  asking if the contents of the two objects  are the same. In the case of lists, it needs to be in the same order as well. For example:\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 57,
+      "metadata": {
+        "id": "4uu4Mjo842BC",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "ad8a3309-5dab-4c09-96e0-c1c1bc942d0c"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "True"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 57
+        }
+      ],
+      "source": [
+        "1==1"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 58,
+      "metadata": {
+        "id": "Fcp6jcGZ46Hn",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "deaf07b6-8908-4aad-c4a7-da9eea18205f"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "True"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 58
+        }
+      ],
+      "source": [
+        "[1,2,3]==[1,2,3]"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 59,
+      "metadata": {
+        "id": "5nsQubAK5Buw",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "d03854c9-d358-4e9d-de17-c84b418f90b6"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "True"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 59
+        }
+      ],
+      "source": [
+        "#Lets create two variables x1 and x2\n",
+        "x1=1\n",
+        "x2=1\n",
+        "x1==x2"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "FZ8Kosui5NHL"
+      },
+      "source": [
+        "**Identity**\n",
+        "\n",
+        "When you ask Python about whether one object is the same as another object, you are asking if they have the same identity. Are they actually the same object? In Python we use the keyword `is`  to designate this concept."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 60,
+      "metadata": {
+        "id": "QOnp5v6b5mmJ",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "7b3c4d07-6c1c-4e0c-b5fc-1e3bac246838"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "False"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 60
+        }
+      ],
+      "source": [
+        "#Lets create two lists\n",
+        "list1=[1,2,3]\n",
+        "list2=[1,2,3]\n",
+        "list1 is list2"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 61,
+      "metadata": {
+        "id": "woolteuP5whu",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "6940f68b-e53a-40aa-94fa-e16cf5bb8cc6"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "True"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 61
+        }
+      ],
+      "source": [
+        "#Lets create two lists\n",
+        "new_list1=[1,2,3]\n",
+        "new_list2=new_list1\n",
+        "new_list1 is new_list2"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "-rgjIaxq7OMU"
+      },
+      "source": [
+        "### 2.9- Variable Scope"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "QywEtdgW7Sm1"
+      },
+      "source": [
+        "Python follows the **LEGB** Rule\n",
+        "\n",
+        "* Local (L): Names assigned in any way within a function (def or lambda)), and not declared global in that function.\n",
+        "* Enclosing (E) function locals: Name in the local scope of any and all enclosing functions (def or lambda), from inner to outer.\n",
+        "* Global (G) module: Names assigned at the top-level of a module file, or declared global in a def within the file.\n",
+        "* Built-in (B) Python: Names preassigned in the built-in names module : open, range, SyntaxError,..."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "WSYU7R6E7iH2"
+      },
+      "source": [
+        "Before running  the code, ask yourself, what would be the output of these code cells"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 62,
+      "metadata": {
+        "id": "_aPcmwCX7qHM",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "d7b97015-e305-460e-a903-16ac86da6f99"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "9\n"
+          ]
+        }
+      ],
+      "source": [
+        "y = 0\n",
+        "#For loop than goes from 0-9\n",
+        "for x in range(10):\n",
+        "    y = x\n",
+        "#Now lets print x\n",
+        "print(x)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 63,
+      "metadata": {
+        "id": "Wk5xMI2j74Fo",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "a20f4847-dd91-4668-ab6c-acc607a84d51"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "4\n",
+            "5\n"
+          ]
+        }
+      ],
+      "source": [
+        "x = 3\n",
+        "#Function Declaration\n",
+        "def foo():\n",
+        "    x=4\n",
+        "    def bar():\n",
+        "        print(x)  # Accesses x from foo's scope\n",
+        "    bar()  # Prints 4\n",
+        "    x=5\n",
+        "    bar()  # Prints 5\n",
+        "\n",
+        "#Function Call\n",
+        "\n",
+        "foo()\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "2tvhIvF98apY"
+      },
+      "source": [
+        "##3- Exercises"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "dmr9Me6zgvGJ"
+      },
+      "source": [
+        "You only need to write code between the `### START CODE HERE ###` and `### END CODE HERE ###` comments. After writing your code, you can run the cell.\n",
+        "\n",
+        "The code cell  will often specify \"(≈ X lines of code)\" in the comments to tell you about how much code you need to write. It is just a rough **estimate**, so it is completely fine for your code to be longer or shorter."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "e89ECB-WheYJ"
+      },
+      "source": [
+        "#### 3.1-Exercise\n",
+        "\n",
+        "Define a function called `ex31` which takes an input a string and replaces all `**` with `^` and replaces all `&` with `and` and replaces all `|` with `or`.\n",
+        "\n",
+        "[Hint 1](https://docs.python.org/3.7/library/string.html#string.replace) and [Hint 2](https://www.geeksforgeeks.org/python-string-replace/)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 64,
+      "metadata": {
+        "id": "qRgIP4QEhtuq"
+      },
+      "outputs": [],
+      "source": [
+        "### START CODE HERE ### (≈ 2 line of code)\n",
+        "def ex31(s):\n",
+        "    s = s.replace(\"**\", \"^\").replace(\"&\", \"and\").replace(\"|\", \"or\")\n",
+        "    return s\n",
+        "\n",
+        "### END CODE HERE ##"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 65,
+      "metadata": {
+        "id": "eVID01u_hwz_",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "643988cb-2c21-4e34-950a-379d3df93537"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "If I take 3^2 and 4^3, I should get 9 and or 64\n"
+          ]
+        }
+      ],
+      "source": [
+        "try:\n",
+        "    print(ex31(\"If I take 3**2 & 4**3, I should get 9 & | 64\"))\n",
+        "except Exception as e:\n",
+        "    print(\"Something is not working right\")\n",
+        "    print(e)\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "eYq_QvdRhrQm"
+      },
+      "source": [
+        "**Expected output**: `If I take 3^2 and 4^3, I should get 9 and or 64`"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "-zwzZMOWjT9_"
+      },
+      "source": [
+        "#### 3.2-Exercise\n",
+        "\n",
+        "Define three functions `doub`,`mult`, `cube`so that:\n",
+        "\n",
+        "1) `doub`  doubles the input number\n",
+        "\n",
+        "2) `mult` multiplies it with 10\n",
+        "\n",
+        "3) `cube` should cube it\n",
+        "\n",
+        "Them call the functions in succession from the starting argument 10, like 1(2(3(10))). Pass the return value to the variable `ex32`"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 66,
+      "metadata": {
+        "id": "AyjseV-hlzt8"
+      },
+      "outputs": [],
+      "source": [
+        "### START CODE HERE ### (≈ 7 line of code)\n",
+        "def doub(x):\n",
+        "    return x * 2\n",
+        "\n",
+        "def mult(x):\n",
+        "    return x * 10\n",
+        "\n",
+        "def cube(x):\n",
+        "    return x ** 3\n",
+        "\n",
+        "ex32 = doub(mult(cube(10)))\n",
+        "\n",
+        "### END CODE HERE ##"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 67,
+      "metadata": {
+        "id": "Tku7bAJEl0MQ",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "fd8fa7ef-3502-4b83-aaf8-e1018aa2df22"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "20000\n"
+          ]
+        }
+      ],
+      "source": [
+        "\n",
+        "try:\n",
+        "    print(ex32)\n",
+        "except Exception as e:\n",
+        "    print(\"Something is not working right\")\n",
+        "    print(e)\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "wz0hvSr1maD4"
+      },
+      "source": [
+        "**Expected output**: `20000`"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "eDw-M6L-nMLj"
+      },
+      "source": [
+        "#### 3.3-Exercise\n",
+        "\n",
+        "Define a lambda function that take a x as argument to calculate $$((1 + \\frac{1}{n})^n)^x$$ with n = 1000, and save it to `ex33`"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 72,
+      "metadata": {
+        "id": "OFi9usp3nY9E"
+      },
+      "outputs": [],
+      "source": [
+        "### START CODE HERE ### (≈ 1 line of code)\n",
+        "n=1000\n",
+        "ex33= lambda x: ((1 + 1/n) ** n) ** x\n",
+        "### END CODE HERE ##"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 73,
+      "metadata": {
+        "id": "vhS23F-bnY0g",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "f317b9be-239d-45d7-88bf-092316777bb9"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "21916.681339054318\n"
+          ]
+        }
+      ],
+      "source": [
+        "\n",
+        "try:\n",
+        "    print(ex33(10))\n",
+        "except Exception as e:\n",
+        "    print(\"Something is not working right\")\n",
+        "    print(e)\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "6ZG4BBhyoeZD"
+      },
+      "source": [
+        "**Expected output**: `21916.681339054318`"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "t40F9lCPomoG"
+      },
+      "source": [
+        "#### 3.4 Exercise\n",
+        "\n",
+        "Define a lambda function to get the first and last elements of a list as a new list, and save it to `ex34`\n",
+        "\n",
+        "[Hint](https://www.w3schools.com/python/python_arrays.asp)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 74,
+      "metadata": {
+        "id": "hYdpAE8gox3G"
+      },
+      "outputs": [],
+      "source": [
+        "### START CODE HERE ### (≈ 1 line of code)\n",
+        "ex34= lambda lst: [lst[0], lst[-1]] if lst else []\n",
+        "### END CODE HERE ##"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 75,
+      "metadata": {
+        "id": "qqPGtRVNo8BX",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "a450cf0d-f871-489d-b07e-ab89202260fd"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 100]\n"
+          ]
+        }
+      ],
+      "source": [
+        "try:\n",
+        "    print(ex34([1,2,3,30,100]))\n",
+        "except Exception as e:\n",
+        "    print(\"Something is not working right\")\n",
+        "    print(e)\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "8-SVthZAprPY"
+      },
+      "source": [
+        "**Expected output**: `[1, 100]`"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "NlUMvw5ipwFb"
+      },
+      "source": [
+        "#### 3.5 Exercise\n",
+        "Declare a function named `ex35` that takes the parameters `weekday`, which is True if it is a weekday, and the parameter `vacation`, which is True if you are on vacation. The function returns True if it is not a weekday or you're on vacation, False otherwise.\n",
+        "\n",
+        "[Hint](https://www.w3schools.com/python/python_conditions.asp)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 76,
+      "metadata": {
+        "id": "cbjQ7H_sq9IT"
+      },
+      "outputs": [],
+      "source": [
+        "def ex35(weekday, vacation):\n",
+        "\n",
+        "### START CODE HERE ### (≈ 3 line of code)\n",
+        "    return not weekday or vacation\n",
+        "\n",
+        "\n",
+        "### END CODE HERE ##\n",
+        "    return False   ##You can delete this line if you want to"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 77,
+      "metadata": {
+        "id": "Mf7owFkireWc",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "53791458-26da-4c07-a109-3bfd34175a35"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "True\n",
+            "False\n",
+            "True\n",
+            "True\n"
+          ]
+        }
+      ],
+      "source": [
+        "try:\n",
+        "    print(ex35(False, False))\n",
+        "    print(ex35(True, False))\n",
+        "    print(ex35(False, True))\n",
+        "    print(ex35(True, True))\n",
+        "except Exception as e:\n",
+        "    print(\"Something is not working right\")\n",
+        "    print(e)\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "MsguzPRcrrGH"
+      },
+      "source": [
+        "**Expected output**:\n",
+        "```\n",
+        "    True\n",
+        "    False\n",
+        "    True\n",
+        "    True\n",
+        "```"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "xgLpyYDwxjkr"
+      },
+      "source": [
+        "#### 3.6 Exercise\n",
+        "\n",
+        "Declare a function named `ex36` that take as parameter two integer arrays, a and b. It return the total number of times the number 3 shows up in `a` divided by the total of times the number 4 show up in `b`.\n",
+        "\n",
+        "[Hint](https://docs.python.org/3/library/array.html)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 80,
+      "metadata": {
+        "id": "WuKneUkZyXuZ"
+      },
+      "outputs": [],
+      "source": [
+        "def ex36(a,b):\n",
+        "### START CODE HERE ### (≈ 1 line of code)\n",
+        "  return a.count(3) / b.count(4) if b.count(4) != 0 else None\n",
+        "### END CODE HERE ##\n",
+        "      ##You can delete this line if you want to"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 81,
+      "metadata": {
+        "id": "fZioT7m3y_0f",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "4eac67ce-6292-419d-f1ef-b7c080df78a7"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "2.0\n"
+          ]
+        }
+      ],
+      "source": [
+        "try:\n",
+        "    print(ex36(a=[2,3,4,6,3,3,6,3],b=[4,6,8,4,2]))\n",
+        "except Exception as e:\n",
+        "    print(\"Something is not working right\")\n",
+        "    print(e)\n",
+        "\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "CFQNAWXAzJKi"
+      },
+      "source": [
+        "**Expected output**: `2.0`"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "x0TC0vHHzl0_"
+      },
+      "source": [
+        "#### 3.7 Exercise\n",
+        "\n",
+        "Declare a function named `ex37` that take as parameter a string array and prints each element of the array  with  a `!` at the end (each element if printed in a single line)\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 83,
+      "metadata": {
+        "id": "zI_ICPKlz6EQ"
+      },
+      "outputs": [],
+      "source": [
+        "def ex37(s):\n",
+        "### START CODE HERE ### (≈ 2 line of code)\n",
+        "  for word in s:\n",
+        "        print(word + \"!\")\n",
+        "\n",
+        "### END CODE HERE ##\n",
+        "      ##You can delete this line if you want to"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 84,
+      "metadata": {
+        "id": "QBA3ZJo90Cam",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "db58756a-c54f-40d4-cd32-fc7be5c17bea"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Hello!\n",
+            "Hola!\n",
+            "Ciao!\n",
+            "Bonjour!\n"
+          ]
+        }
+      ],
+      "source": [
+        "try:\n",
+        "    ex37([\"Hello\", \"Hola\", \"Ciao\", \"Bonjour\"])\n",
+        "except Exception as e:\n",
+        "    print(\"Something is not working right\")\n",
+        "    print(e)\n",
+        "\n",
+        "\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "39OXfAVx0q9q"
+      },
+      "source": [
+        "**Expected output**:\n",
+        "```\n",
+        "Hello!\n",
+        "Hola!\n",
+        "Ciao!\n",
+        "Bonjour!\n",
+        "```"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "j6dVCBEpsSEn"
+      },
+      "source": [
+        "##4- More Information"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "LUtEdukSse9c"
+      },
+      "source": [
+        "This was just a very basic introduction of Python. Please make sure to review all the links provided in this Notebook. Topics that we did not covered in this Notebook that you should get familiarized are:\n",
+        "\n",
+        "[Errors and Debugging](https://colab.research.google.com/github/jakevdp/PythonDataScienceHandbook/blob/master/notebooks/01.06-Errors-and-Debugging.ipynb)\n",
+        "\n",
+        "[Data manipulation with Pandas](https://colab.research.google.com/github/jakevdp/PythonDataScienceHandbook/blob/master/notebooks/03.00-Introduction-to-Pandas.ipynb)\n",
+        "\n",
+        "[Visualizations with Matplotlib](https://colab.research.google.com/github/jakevdp/PythonDataScienceHandbook/blob/master/notebooks/04.00-Introduction-To-Matplotlib.ipynb)\n",
+        "\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "D8dMOd3DYlQQ"
+      },
+      "source": [
+        "###### **DO NOT DELETE, MODIFY, NOR USE THESE CODE CELLS**\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 85,
+      "metadata": {
+        "cellView": "both",
+        "id": "YddEqgDQYlFf",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "897ac9e5-9447-48ee-824d-bafdc5d2ad7b"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "--2025-02-24 19:16:26--  https://raw.githubusercontent.com/lopezbec/intro_python_notebooks/main/Grading_PB.py\n",
+            "Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.111.133, 185.199.109.133, 185.199.108.133, ...\n",
+            "Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.111.133|:443... connected.\n",
+            "HTTP request sent, awaiting response... 200 OK\n",
+            "Length: 1570 (1.5K) [text/plain]\n",
+            "Saving to: ‘Grading_PB.py’\n",
+            "\n",
+            "\rGrading_PB.py         0%[                    ]       0  --.-KB/s               \rGrading_PB.py       100%[===================>]   1.53K  --.-KB/s    in 0s      \n",
+            "\n",
+            "2025-02-24 19:16:26 (25.9 MB/s) - ‘Grading_PB.py’ saved [1570/1570]\n",
+            "\n",
+            "54\n",
+            "70\n",
+            "test : True\n",
+            "Operators : True\n",
+            "Functions : True\n",
+            "ex31 : True\n",
+            "ex32 : True\n",
+            "ex33 : True\n",
+            "ex34 : True\n",
+            "ex35 : True\n",
+            "ex36 : True\n",
+            "ex37 : CHECK CODE ABOVE\n"
+          ]
+        }
+      ],
+      "source": [
+        "# -*- coding: utf-8 -*-\n",
+        "!wget https://raw.githubusercontent.com/lopezbec/intro_python_notebooks/main/Grading_PB.py\n",
+        "import Grading_PB\n",
+        "\n",
+        "try:\n",
+        "    test\n",
+        "except:\n",
+        "    test=None\n",
+        "try:\n",
+        "    div2\n",
+        "except:\n",
+        "    div2=None\n",
+        "try:\n",
+        "    mod\n",
+        "except:\n",
+        "    mod=None\n",
+        "try:\n",
+        "    sqr\n",
+        "except:\n",
+        "    sqr=None\n",
+        "try:\n",
+        "    plus2\n",
+        "except:\n",
+        "    plus2=None\n",
+        "try:\n",
+        "    pwr\n",
+        "except:\n",
+        "    pwr=None\n",
+        "try:\n",
+        "    ex31\n",
+        "except:\n",
+        "    ex31=None\n",
+        "try:\n",
+        "    ex32\n",
+        "except:\n",
+        "    ex32=None\n",
+        "try:\n",
+        "    doub\n",
+        "except:\n",
+        "    doub=None\n",
+        "try:\n",
+        "    mult\n",
+        "except:\n",
+        "    mult=None\n",
+        "try:\n",
+        "    cube\n",
+        "except:\n",
+        "    cube=None\n",
+        "try:\n",
+        "    ex33\n",
+        "except:\n",
+        "    ex33=None\n",
+        "try:\n",
+        "    ex34\n",
+        "except:\n",
+        "    ex34=None\n",
+        "try:\n",
+        "    ex35\n",
+        "except:\n",
+        "    ex35=None\n",
+        "try:\n",
+        "    ex36\n",
+        "except:\n",
+        "    ex36=None\n",
+        "\n",
+        "\n",
+        "Grading_PB.GRADING(test,div2,mod,sqr,plus2,pwr,ex31,ex32,doub,mult,cube,ex33,ex34,ex35,ex36)"
+      ]
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "name": "Python_Basics.ipynb",
+      "provenance": []
+    },
+    "coursera": {
+      "course_slug": "neural-networks-deep-learning",
+      "graded_item_id": "XHpfv",
+      "launcher_item_id": "Zh0CU"
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    },
+    "language_info": {
+      "codemirror_mode": {
+        "name": "ipython",
+        "version": 3
+      },
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "nbconvert_exporter": "python",
+      "pygments_lexer": "ipython3",
+      "version": "3.6.0"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
